@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RyanStichCodingAssignmentOne</string>
+    <string name="button">Button</string>
+    <string name="rules">Charades Game!</string>
+    <string name="charades_game">Charades Game!</string>
+    <string name="press_the_button_below_to_generate_a_new_word_start_your_game_of_charades"><![CDATA[Press the button below to generate a new word & start your game of charades!]]></string>
+    <string name="welcome_to_my_charades_app">Welcome To My Charades App!</string>
+    <string name="generate_word">Generate Word</string>
+</resources>
