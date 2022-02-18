@@ -19,22 +19,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.12" />
 
-    <TextView
-        android:id="@+id/charadetext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#D81B60"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/charades3"
-        app:layout_constraintVertical_bias="0.32"
-        tools:text="Test" />
+<!--    We prefer to use snake_case for XML IDs -->
+<!--    'instruction_text' is a bit more descriptive -->
+<!--    Swapped the order of the views - we should try to list them in the order they appear on the screen -->
+<!--    Also, for future reference, you might want to reduce the size of TextViews like this one to ensure that they don't extend fully to the screen margins-->
 
     <TextView
-        android:id="@+id/charades3"
+        android:id="@+id/instruction_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -48,6 +39,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.178" />
+
+    <TextView
+        android:id="@+id/charade_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#D81B60"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instruction_text"
+        app:layout_constraintVertical_bias="0.32"
+        tools:text="Test" />
+
+
 
     <Button
         android:id="@+id/button"

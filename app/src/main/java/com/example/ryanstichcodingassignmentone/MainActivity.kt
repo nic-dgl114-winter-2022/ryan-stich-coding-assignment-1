@@ -10,35 +10,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         /* Create a variable to store the button inside */
-        val CharadesButton: Button = findViewById(R.id.button)
+        val charadesButton: Button = findViewById(R.id.button) // variable identifiers should be written in camelCase (small first letter)
 
         /* Create an array to store the charade nouns inside */
-        val myArray = arrayOf<String>("Elephant", "Airplane", "Spiderman", "Frankenstein", "Staircase", "Rabbit", "Climbing", "Running", "Baseball", "Itchy" )
+        //Prefer more descriptive identifiers
+        val charadesList = arrayOf<String>("Elephant", "Airplane", "Spiderman", "Frankenstein", "Staircase", "Rabbit", "Climbing", "Running", "Baseball", "Itchy" )
 
         /* Creates a variable to store the array length inside, which we can use later to generate a random number */
-        val myArrayValue = myArray.size - 1
+//        val myArrayValue = charadesList.size - 1 //Same here - this should be a more descriptive name
 
         /* Add an onclick listener to the button, so that we can modify the text and display a different array element containing a charade prompt */
-        CharadesButton.setOnClickListener {
+        charadesButton.setOnClickListener {
             /* Store text view inside a variable */
-            val resultTextView: TextView = findViewById(R.id.charadetext)
-            /* Create our random number variable */
-            val rando = shuffle(myArrayValue).randomizer()
-            /* Use our random number to depict which charade prompt will be shown */
-            resultTextView.text = myArray[rando]
+            val resultTextView: TextView = findViewById(R.id.charade_text)
+
+            // The following would be more idiomatic:
+            resultTextView.text = charadesList.random()
         }
     }
 
     /* Shuffle is used to generate us a random number, very similar to how it was used in the dice tutorial, but instead of rolling dice i am using it to manipulate
     my array to display various strings stored inside!
      */
-    class shuffle(val numSides: Int) {
-
-        fun randomizer(): Int {
-            return (1..numSides).random()
-        }
-    }
-
+    // Shuffle is unnecessary since the random() method can be applied directly to your array.
 
 
 }
